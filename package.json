@@ -1,0 +1,74 @@
+{
+  "name": "v0-futuristic-dashboard-pro",
+  "version": "1.0.0",
+  "description": "🚀 Professional Futuristic Dashboard - Production Ready with Stripe Integration",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "build:github": "cp next.config.github.js next.config.js && next build",
+    "start": "next start",
+    "lint": "next lint",
+    "export": "next export", 
+    "deploy": "vercel --prod",
+    "deploy:localhost": "npm run dev",
+    "deploy:github": "npm run build:github",
+    "stripe:listen": "stripe listen --forward-to localhost:3000/api/webhooks"
+  },
+  "keywords": [
+    "dashboard",
+    "typescript",
+    "nextjs",
+    "react",
+    "tailwindcss",
+    "stripe",
+    "saas",
+    "analytics",
+    "modern-ui",
+    "responsive"
+  ],
+  "author": "Rind AI - NeuraNest",
+  "license": "MIT",
+  "dependencies": {
+    "@headlessui/react": "^1.7.0",
+    "@heroicons/react": "^2.0.0",
+    "@stripe/stripe-js": "^2.1.0",
+    "@types/node": "^20.0.0",
+    "@types/react-dom": "^18.2.0",
+    "autoprefixer": "^10.4.0",
+    "axios": "^1.5.0",
+    "clsx": "^2.0.0",
+    "date-fns": "^2.30.0",
+    "framer-motion": "^10.0.0",
+    "lucide-react": "^0.294.0",
+    "next": "^14.0.0",
+    "postcss": "^8.4.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hot-toast": "^2.4.0",
+    "recharts": "^2.8.0",
+    "stripe": "^14.0.0",
+    "tailwindcss": "^3.3.0",
+    "typescript": "^5.0.0",
+    "zustand": "^4.4.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.5.0",
+    "@tailwindcss/typography": "^0.5.0",
+    "@types/react": "^18.3.24",
+    "eslint": "^8.50.0",
+    "eslint-config-next": "^14.0.0",
+    "vercel": "^32.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Rind-AI/v0-futuristic-dashboard.git"
+  },
+  "homepage": "https://v0-dashboard.vercel.app",
+  "bugs": {
+    "url": "https://github.com/Rind-AI/v0-futuristic-dashboard/issues"
+  }
+}
