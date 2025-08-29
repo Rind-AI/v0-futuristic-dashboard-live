@@ -5,8 +5,8 @@ const nextConfig = {
   
   // GitHub Pages Configuration
   trailingSlash: true,
-  basePath: process.env.NODE_ENV === 'production' ? '/v0-futuristic-dashboard' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/v0-futuristic-dashboard/' : '',
+  basePath: process.env.NODE_ENV === 'production' ? '/v0-futuristic-dashboard-live' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/v0-futuristic-dashboard-live/' : '',
   
   // Static export for GitHub Pages
   output: 'export',
@@ -25,30 +25,8 @@ const nextConfig = {
   
   // GitHub Pages doesn't support API routes, so we disable them
   experimental: {
-    appDir: false
-  },
-  
-  async headers() {
-    return [
-      {
-        source: '/(.*)',
-        headers: [
-          {
-            key: 'Access-Control-Allow-Origin',
-            value: '*',
-          },
-          {
-            key: 'Access-Control-Allow-Methods',
-            value: 'GET, POST, PUT, DELETE, OPTIONS',
-          },
-          {
-            key: 'Access-Control-Allow-Headers',
-            value: 'Content-Type, Authorization',
-          },
-        ],
-      },
-    ]
-  },
+    // Remove invalid options for Next.js 14
+  }
 }
 
 module.exports = nextConfig
